@@ -1,0 +1,74 @@
+<div class='sidebar' ng-show="state.sidebarIsOpened">
+
+	<div class="sidebar-header">
+
+		<div class="sidebar-header__text">
+			Югорский университет
+		</div>
+		
+		<div class='header-button header-button_right' data-ng-click='toogleSidebar()'>
+			<i class='header-button__icon material-icons'>&#xE5CD;</i>
+		</div>
+
+	</div>
+
+	<div class="sidebar-cat-text">Разделы</div>
+
+	<ul class='sidebar-menu'>
+		<a class='sidebar-menu-item__link' ui-sref="menu">
+			<li class='sidebar-menu-item main-page-li'>
+				<i class="material-icons sidebar-menu-item__icon">&#xE88A;</i> 
+				Главная
+			</li>
+		</a>
+		<a class='sidebar-menu-item__link' ui-sref="news">
+			<li class='sidebar-menu-item news-li'>
+				<i class="material-icons sidebar-menu-item__icon">&#xE02F;</i>
+				Новости
+			</li>
+		</a>
+		<a class='sidebar-menu-item__link' ui-sref="timetable">
+			<li class='sidebar-menu-item timetable-li'>
+				<i class="material-icons sidebar-menu-item__icon">&#xE878;</i>
+				Расписание
+			</li>
+		</a>
+		<a class='sidebar-menu-item__link' ui-sref="personal">
+			<li class='sidebar-menu-item personal-li'>
+				<i class="material-icons sidebar-menu-item__icon">&#xE7FD;</i>
+				Персональная
+			</li>
+		</a>
+		<a class='sidebar-menu-item__link' ui-sref="finance">
+			<li class='sidebar-menu-item finance-li'>
+				<i class="material-icons sidebar-menu-item__icon">&#xE263;</i>
+				Финансы
+			</li>
+		</a>
+		<a class='sidebar-menu-item__link' ui-sref="info">
+			<li class='sidebar-menu-item info-li'>
+				<i class="material-icons sidebar-menu-item__icon">&#xE880;</i>
+				Справочник
+			</li>
+		</a>
+		<a class='sidebar-menu-item__link' ui-sref="settings">
+			<li class='sidebar-menu-item settings-li'>
+				<i class="material-icons sidebar-menu-item__icon">&#xE8B8;</i>
+				Настройки
+			</li>
+		</a>
+		<a class='sidebar-menu-item__link' ui-sref="about">
+			<li class='sidebar-menu-item about-li'>
+				<i class="material-icons sidebar-menu-item__icon">&#xE88E;</i>
+				О приложении
+			</li>
+		</a>
+		<a class='sidebar-menu-item__link' data-ng-click="disLogin()">
+			<li class='sidebar-menu-item exit-li'>
+				<i class="material-icons sidebar-menu-item__icon">&#xE879;</i>
+				Выход
+			</li>
+		</a>
+	</ul>
+
+</div>

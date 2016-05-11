@@ -11,11 +11,13 @@ var browserify = require('browserify');
 var source = require('vinyl-source-stream');
 var buffer = require('vinyl-buffer');
 var rename = require('gulp-rename');
+// var htmlmin = require('gulp-htmlmin');
 
 
 var tasks = [
 	'common',
 	'js',
+	'css',
 	'main_page',
 	'html'
 ]
@@ -44,9 +46,11 @@ gulp.task('dev_watcher', function() {
 
 gulp.task('common', [], function() {
 
-	// var libs = [
-	// 	'node_modules/angular/angular.min.js'
-	// ]
+	var libs = [
+		'node_modules/angular/angular.min.js',
+		'node_modules/angular-ui-router/release/angular-ui-router.min.js',
+		'node_modules/angular-animate/angular-animate.min.js'
+	]
 
 	// gulp.src(libs)
 	// 	.pipe(concat('libs.js'))
@@ -58,8 +62,11 @@ gulp.task('common', [], function() {
 	// imgs
 	copyFilesToProd(['/common/img/'], ['*.*']);
 
-	// fonts
-	//copyFilesToProd(['/common/fonts/'], ['*.*']);
+	//fonts
+
+	// gulp.src(devPrefix + '/common/fonts/**/*.*')
+	// 		.pipe(gulp.dest(prodPrefix + '/common/fonts/'))
+	// 		.pipe(livereload());
 
 
 })
@@ -83,6 +90,30 @@ gulp.task('js', [], function() {
 
 })
 
+
+///////////////////////
+//	  css  		///
+///////////////////////
+
+gulp.task('css', [], function() {
+
+	var src = [
+		devPrefix + '/modules/**/*.css',
+		devPrefix + '/directives/**/*.css'
+	];
+
+
+	gulp.src(src)
+		.pipe(css_concat('main.css'))
+	    .pipe(autoprefixer('> 1%'))
+	    .pipe(clean())
+	    .pipe(gulp.dest(prodPrefix + '/modules/css'))
+	    .pipe(livereload());
+
+
+})
+
+
 ///////////////////////
 //	  html  		///
 ///////////////////////
@@ -91,6 +122,7 @@ gulp.task('html', [], function() {
 
 	gulp.src([devPrefix + '/modules/**/*.html', 
 			  devPrefix + '/directives/**/*.html'])
+		// .pipe(htmlmin({collapseWhitespace: true}))
 		.pipe(rename({dirname: ''}))
 		.pipe(gulp.dest('./' + prodPrefix + '/modules/tmpl'));
 

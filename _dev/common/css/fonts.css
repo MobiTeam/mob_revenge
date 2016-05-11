@@ -28,3 +28,45 @@
   /* Support for IE. */
   font-feature-settings: 'liga';
 }
+
+/* font-family: "RobotoRegular"; */
+@font-face {
+    font-family: "RobotoRegular";
+    src: url("/common/fonts/RobotoRegular/RobotoRegular.eot");
+    src: url("/common/fonts/RobotoRegular/RobotoRegular.eot?#iefix")format("embedded-opentype"),
+    url("/common/fonts/RobotoRegular/RobotoRegular.woff") format("woff"),
+    url("/common/fonts/RobotoRegular/RobotoRegular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+/* font-family: "RobotoLight"; */
+@font-face {
+    font-family: "RobotoLight";
+    src: url("/common/fonts/RobotoLight/RobotoLight.eot");
+    src: url("/common/fonts/RobotoLight/RobotoLight.eot?#iefix")format("embedded-opentype"),
+    url("/common/fonts/RobotoLight/RobotoLight.woff") format("woff"),
+    url("/common/fonts/RobotoLight/RobotoLight.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+/* font-family: "RobotoMedium"; */
+/*@font-face {
+    font-family: "RobotoMedium";
+    src: url("/common/fonts/RobotoMedium/RobotoMedium.eot");
+    src: url("/common/fonts/RobotoMedium/RobotoMedium.eot?#iefix")format("embedded-opentype"),
+    url("/common/fonts/RobotoMedium/RobotoMedium.woff") format("woff"),
+    url("/common/fonts/RobotoMedium/RobotoMedium.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}*/
+/* font-family: "RobotoBold"; */
+/*@font-face {
+    font-family: "RobotoBold";
+    src: url("/common/fonts/RobotoBold/RobotoBold.eot");
+    src: url("/common/fonts/RobotoBold/RobotoBold.eot?#iefix")format("embedded-opentype"),
+    url("/common/fonts/RobotoBold/RobotoBold.woff") format("woff"),
+    url("/common/fonts/RobotoBold/RobotoBold.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+*/

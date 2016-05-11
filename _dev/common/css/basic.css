@@ -1,3 +1,22 @@
 html, body {
 	height: 100%;
+	font-family: 'RobotoRegular'!important;
+}
+
+.overlay {
+	position: fixed;
+	background: black;
+	height: 100%;
+	width: 100%;
+	z-index: 1000;
+	opacity: 0.1;
+	transition: all ease-out 0.25s;
+}
+
+.overlay.ng-hide {
+  	opacity: 0;
+}
+
+.viewBox {
+	padding: 65px 15px 20px;
 }

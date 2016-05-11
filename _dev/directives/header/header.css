@@ -1,0 +1,51 @@
+/* header */
+
+.header {
+	height: 54px;
+	width: 100%;
+	background: #5677fc;
+	color: white;
+	position: fixed;
+}
+
+/* header-line */
+
+.header-line {
+   user-select: none;
+   height: 54px;
+   width: 100%;
+}
+
+/* header-button */
+
+.header-button {
+	height: 54px;
+	width: 48px;
+	position: relative;
+	float: left;
+}
+
+.header-button:active {
+	background-color:#3266d5;
+}
+
+.header-button__icon {
+	font-size: 24px;
+  	overflow: auto;
+  	margin: auto;
+  	position: absolute;
+  	top: 14px;
+  	left: 10px;
+}
+
+/* header-title */
+
+.header-title {
+	float: left;
+	margin-top: 16px;
+}
+
+.header-title__text {
+	font-size: 18px;
+
+}

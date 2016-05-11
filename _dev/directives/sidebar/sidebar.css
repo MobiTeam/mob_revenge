@@ -1,0 +1,74 @@
+.sidebar {
+	position: absolute;
+	width: 260px;
+	background: white;
+	height: 100%;
+	z-index: 2000;
+	transition:all ease-out 0.2s;
+	left: 0px;
+	user-select: none;
+	box-shadow: 10px 0px 65px -23px rgba(0,0,0,0.12);
+}
+
+.sidebar.ng-hide {
+	left: -260px;
+}
+
+.sidebar-header {
+	width: 260px;
+	height: 54px;
+	background: #5677fc;
+	color: white;
+}
+
+.sidebar-header__text {
+	width: 200px;
+    float: left;
+    margin-top: 17px;
+    padding-left: 12px;
+}
+
+.header-button_right {
+	float: right;
+}
+
+.sidebar-cat-text {
+	color: rgba(0,0,0,0.68);
+	font-family: 'RobotoLight';
+	font-size: 15px;
+	padding: 15px;
+	font-weight: 500;
+}
+
+.sidebar-menu-item {
+	user-select: none;
+	padding: 14px;
+	border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.sidebar-menu-item:active {
+	background: rgba(0,0,0,0.05);
+}
+
+.sidebar-menu-item__icon {
+	color: rgba(0,0,0,0.75);
+	vertical-align: text-bottom;
+	margin-right: 20px;
+	margin-left: 5px;
+}
+
+.sidebar-menu-item__link {
+	text-decoration: none;
+}
+
+.sidebar-menu-item__link:link, .sidebar-menu-item__link:hover, .sidebar-menu-item__link:visited {
+	color: rgba(0,0,0,0.75);
+}
+
+ .sidebar-menu-item__link:active {
+ 	color: rgba(0,0,0,0.95);
+ }
+
+/* .settings-li {
+ 	border-top: 1px solid rgba(0,0,0,0.15);
+ }*/

@@ -6,13 +6,18 @@
 	<meta name="description" content="Официально мобильное приложение Югорского государственного университета">
 	<meta name="keywords" content="Личный кабинет, мобильное приложение, новости, расписание, Югорский Государственный университет, ЮГУ">
 	<link rel="stylesheet" type="text/css" href="/common/css/libs.css">
+	<link rel="stylesheet" type="text/css" href="/modules/css/main.css">
 </head>
 
-<body>
+<body data-ng-controller='viewController'>
 	
+	<div class="overlay" data-ng-show="state.sidebarIsOpened" data-ng-click="closeSidebar()"></div>
+
 	<div data-header-dir></div>
 
-	<div></div>
+	<div data-sidebar-dir></div>
+
+	<div data-ui-view class="viewBox"></div>
 
 	<script src="common/libs.js"></script>
 	<script src="modules/js/app.js"></script>
