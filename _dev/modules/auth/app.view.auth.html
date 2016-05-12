@@ -1,1 +1,17 @@
-Финансы
+<div class="authorisation_box">
+				
+	<div class="authorisation_box_logo">
+	</div>
+	
+	<form class="authorisation_box_form" method="post">
+
+		<input class="material_input" placeholder="Логин" data-ng-model="user.login" type="text" required="">
+		<input class="material_input" placeholder="Пароль" data-ng-model="user.password" type="password" required="">
+		
+		<span class="passtext">Запомнить меня</span><input type="checkbox" class="save_password" value="1" data-ng-model="currState.savePass"><br>
+		<br>
+		<input class="material_button material_button_blue" data-ng-click="func.tryAuth(user)" type="submit" value="Войти">
+	    <input class="material_button material_button_white" data-ng-click="func.skipForm()" type="button" value="Пропустить">
+	</form> 
+
+</div>

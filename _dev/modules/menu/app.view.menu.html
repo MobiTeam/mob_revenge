@@ -1,1 +1,119 @@
-Менюю
+<div class="content_box_itemwrapper" unselectable="on" onselectstart="return false;">
+						
+	<a class='menu_item_a' ui-sref="timetable">
+		<div class="content_box_menuitem">
+			
+			<div class="main_calendar_icon main_icon_block"></div>
+				
+			<div class="content_box_name_item">	
+			  Расписание
+			</div>
+		</div>
+	</a>
+
+	<a class='menu_item_a' ui-sref="coffe">
+		<div class="content_box_menuitem">
+			
+			<div class="main_coffe_icon main_icon_block"></div>
+		   
+			<div class="content_box_name_item coffe_content">	
+			  Столовая
+			</div>
+		</div>
+	</a>
+
+	<a class='menu_item_a' ui-sref="news">
+		<div class="content_box_menuitem">
+		
+			<div class="main_news_icon main_icon_block"></div> 
+				
+			<div class="content_box_name_item news_content"> 
+			  Новости
+			</div>
+		</div>
+	</a>
+
+	<a class='menu_item_a' ui-sref="timetable" data-ng-show="currState.isAuth"> 
+		<div class="content_box_menuitem authblock">
+			
+			<div class="main_lib_icon main_icon_block"></div>
+			
+		   
+			<div class="content_box_name_item lib_content">	
+			  Библиотека
+			</div>
+		</div>
+	</a>
+
+	<a class='menu_item_a' ui-sref="thres">
+		<div class="content_box_menuitem" hashtag="file_info">
+			
+			<div class="main_file_icon main_icon_block"></div>
+			
+		   
+			<div class="content_box_name_item file_content">	
+			  Эл. ресурсы преп.
+			</div>
+		</div>
+	</a>
+	
+	<a class='menu_item_a' ui-sref="timetable" data-ng-show="currState.isAuth">
+		<div class="content_box_menuitem authblock only_stud" hashtag="group_info" style="display: inline-block;">
+			
+			<div class="main_group_icon main_icon_block"></div>
+			
+		   
+			<div class="content_box_name_item group_content">	
+			  Моя группа
+			</div>
+		</div>
+	</a>
+
+	<a class='menu_item_a' ui-sref="personal" data-ng-show="currState.isAuth">
+		<div class="content_box_menuitem authblock" hashtag="persinf" style="display: inline-block;">
+			
+			<div class="main_person_icon main_icon_block"></div>
+			
+		
+			<div class="content_box_name_item pers_content">	
+			  Персональная инф.
+			</div>
+		</div>
+	</a>
+	
+	<a class='menu_item_a' ui-sref="finance" data-ng-show="currState.isAuth">
+		<div class="content_box_menuitem authblock" hashtag="finance_inf" style="display: inline-block;">
+			
+			<div class="main_rouble_icon main_icon_block"></div>
+		
+			<div class="content_box_name_item finance_content">	
+			  Финансовая инф.
+			</div>
+		</div>
+	</a>
+	
+	<a class='menu_item_a' ui-sref="info">
+		<div class="content_box_menuitem" hashtag="dir_info">
+			
+			<div class="main_directory_icon main_icon_block"></div>
+		   
+			<div class="content_box_name_item contacts_content">	
+			  Справочник
+			</div>
+		</div>
+	</a>
+
+	<a class='menu_item_a' ui-sref="about">
+		<div class="content_box_menuitem" hashtag="about_app">
+			
+			<div class="main_info_icon main_icon_block"></div>
+		   
+			<div class="content_box_name_item app_info">	
+			  О приложении
+			</div>
+		</div> 
+	</a>
+
+	<div style="clear:both"></div>
+
+</div>

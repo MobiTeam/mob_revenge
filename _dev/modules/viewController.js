@@ -4,9 +4,9 @@
 		.module('app')
 		.controller('viewController', viewController);
 
-	viewController.$inject = ['$scope', '$animate'];
+	viewController.$inject = ['$scope', '$animate', '$rootScope'];
 
-	function viewController ($scope, $animate) {
+	function viewController ($scope, $animate, $rootScope) {
 
 		$scope.state = {
 			'title': '',
@@ -34,10 +34,14 @@
 		}
 
 		function disLogin() {
+
 			if(localStorage && sessionStorage) {
 				localStorage.clear();
 				sessionStorage.clear();
+				$rootScope.currState = null;
+				$rootScope.$state.go('auth');
 			}
+
 		}
 
 	}	

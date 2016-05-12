@@ -4,9 +4,9 @@
 		.module('app')
 		.controller('persCtrl', persCtrl);
 
-	persCtrl.$inject = ['$scope'];
+	persCtrl.$inject = ['$scope', '$rootScope'];
 
-	function persCtrl ($scope) {
+	function persCtrl ($scope, $rootScope) {
 
 		$scope.$parent.state['title'] = 'Персональная информация';
 

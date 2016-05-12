@@ -33,13 +33,13 @@
 				Расписание
 			</li>
 		</a>
-		<a class='sidebar-menu-item__link' ui-sref="personal">
+		<a class='sidebar-menu-item__link' ui-sref="personal" data-ng-show="currState.isAuth">
 			<li class='sidebar-menu-item personal-li'>
 				<i class="material-icons sidebar-menu-item__icon">&#xE7FD;</i>
 				Персональная
 			</li>
 		</a>
-		<a class='sidebar-menu-item__link' ui-sref="finance">
+		<a class='sidebar-menu-item__link' ui-sref="finance" data-ng-show="currState.isAuth">
 			<li class='sidebar-menu-item finance-li'>
 				<i class="material-icons sidebar-menu-item__icon">&#xE263;</i>
 				Финансы
@@ -51,7 +51,7 @@
 				Справочник
 			</li>
 		</a>
-		<a class='sidebar-menu-item__link' ui-sref="settings">
+		<a class='sidebar-menu-item__link' ui-sref="settings" data-ng-show="currState.isAuth">
 			<li class='sidebar-menu-item settings-li'>
 				<i class="material-icons sidebar-menu-item__icon">&#xE8B8;</i>
 				Настройки
@@ -66,7 +66,7 @@
 		<a class='sidebar-menu-item__link' data-ng-click="disLogin()">
 			<li class='sidebar-menu-item exit-li'>
 				<i class="material-icons sidebar-menu-item__icon">&#xE879;</i>
-				Выход
+				Сменить пользователя
 			</li>
 		</a>
 	</ul>

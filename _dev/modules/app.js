@@ -1,8 +1,15 @@
+'use strict';
+
 ;(function() {
 
 	angular
 		.module('app', ['ui.router', 'ngAnimate'])
-		.config(stateConfig);
+		.config(stateConfig)
+		.run(copyStates)
+		.run(checkAuth);
+
+
+	////////////////
 
 	stateConfig.$inject = ['$stateProvider', '$urlRouterProvider'];	
 
@@ -29,13 +36,19 @@
 			.state('personal', {
 				url: '/personal',
 				templateUrl: '/modules/tmpl/app.view.personal.html',
-				controller: 'persCtrl'
+				controller: 'persCtrl',
+				data: {
+					'accessLogin': true
+				}
 			})
 
 			.state('finance', {
 				url: '/finance',
 				templateUrl: '/modules/tmpl/app.view.finance.html',
-				controller: 'finCtrl'
+				controller: 'finCtrl',
+				data: {
+					'accessLogin': true
+				}
 			})
 
 			.state('info', {
@@ -47,15 +60,30 @@
 			.state('settings', {
 				url: '/settings',
 				templateUrl: '/modules/tmpl/app.view.settings.html',
-				controller: 'settCtrl'
+				controller: 'settCtrl',
+				data: {
+					'accessLogin': true
+				}
 			})
 
 			.state('auth', {
 				url: '/auth',
 				templateUrl: '/modules/tmpl/app.view.auth.html',
 				controller: 'authCtrl'
-
 			})
+
+			.state('coffe', {
+				url: '/coffe',
+				templateUrl: '/modules/tmpl/app.view.coffe.html',
+				controller: 'coffeCtrl'
+			})
+
+			.state('thres', {
+				url: '/thres',
+				templateUrl: '/modules/tmpl/app.view.tres.html',
+				controller: 'tresCtrl'
+			})
+
 
 			.state('about', {
 				url: '/about',
@@ -68,6 +96,38 @@
 				templateUrl: '/modules/tmpl/app.view.news.html',
 				controller: 'newsCtrl'
 			});
+
+	}
+
+	//////////////
+
+	copyStates.$inject = ['$rootScope', '$state', '$stateParams'];
+
+	function copyStates($rootScope, $state, $stateParams) {
+
+		$rootScope.$state = $state;
+   		$rootScope.$stateParams = $stateParams;
+	
+	}
+
+	/////////////
+
+	checkAuth.$inject = ['$rootScope'];
+
+	function checkAuth($rootScope) {
+
+		$rootScope.$on('$stateChangeStart', function(event, toState, toParams, fromState, fromParams) {
+
+			if(toState.data && toState.data.accessLogin) {
+
+				if(!$rootScope.currState || !$rootScope.currState.isAuth) {
+					event.preventDefault();
+				 	$rootScope.$state.go('auth');
+				}
+			
+			}		
+
+		});
 
 	}
 

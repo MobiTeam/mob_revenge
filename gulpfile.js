@@ -62,6 +62,9 @@ gulp.task('common', [], function() {
 	// imgs
 	copyFilesToProd(['/common/img/'], ['*.*']);
 
+	// data 
+	copyFilesToProd(['/data/'], ['*.*']);
+
 	//fonts
 
 	// gulp.src(devPrefix + '/common/fonts/**/*.*')
