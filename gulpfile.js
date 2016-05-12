@@ -83,7 +83,8 @@ gulp.task('js', [], function() {
 	var src = [
 		devPrefix + '/modules/app.js',
 		devPrefix + '/modules/**/*.js',
-		devPrefix + '/directives/**/*.js'
+		devPrefix + '/directives/**/*.js',
+		devPrefix + '/services/**/*.js'
 	]
 
 	gulp.src(src)

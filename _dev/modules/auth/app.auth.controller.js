@@ -38,7 +38,6 @@
 	    			'/common/img/lib_icon',
 	    			'/common/img/newspaper_icon',
 	    			'/common/img/person_hi_icon',
-	    			'/common/img/rouble_hi_icon',
 	    			'/common/img/schedule_icon',
 	    			'/common/img/students_group_icon'
 	    		];
@@ -60,11 +59,15 @@
 	    	$dataService.load({
 	    		type: 'userinfo',
 	    		data: user,
-	    		withCache: false
+	    		method: 'POST',
+	    		withCache: false,
+	    		success: function() {
+	    			$rootScope.currState.isAuth = true;
+	    			$rootScope.$state.go("menu");
+	    		}
 	    	})
 
-	    	$rootScope.currState.isAuth = true;
-	    	$rootScope.$state.go("menu");
+	    	
 
 	    }
 

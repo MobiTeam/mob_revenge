@@ -47,5 +47,8 @@
 
 .header-title__text {
 	font-size: 18px;
+}
 
+.left-padding {
+	padding-left: 18px;
 }

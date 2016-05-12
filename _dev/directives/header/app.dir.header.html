@@ -2,11 +2,11 @@
 
 	<div class='header-line'>
 			
-		<div class='header-button' data-ng-click='toogleSidebar()'>
+		<div class='header-button' data-ng-click='toogleSidebar()' data-ng-show='!$state.includes("auth")'>
 			<i class='header-button__icon material-icons'>&#xE5D2;</i>
 		</div>
 
-		<div class='header-title'>
+		<div class='header-title' data-ng-class='{"left-padding": $state.includes("auth")}'>
 			<span class='header-title__text'>{{ state.title }}</span>
 		</div>
 

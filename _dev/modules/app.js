@@ -112,15 +112,15 @@
 
 	/////////////
 
-	checkAuth.$inject = ['$rootScope'];
+	checkAuth.$inject = ['$rootScope', '$session'];
 
-	function checkAuth($rootScope) {
+	function checkAuth($rootScope, $session) {
 
 		$rootScope.$on('$stateChangeStart', function(event, toState, toParams, fromState, fromParams) {
 
 			if(toState.data && toState.data.accessLogin) {
 
-				if(!$rootScope.currState || !$rootScope.currState.isAuth) {
+				if($session.isEmpty()) {
 					event.preventDefault();
 				 	$rootScope.$state.go('auth');
 				}
