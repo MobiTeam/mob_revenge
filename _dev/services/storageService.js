@@ -10,7 +10,8 @@
 
 		return {
 			setData: setData,
-			getData: getData
+			getData: getData,
+			removeData: removeData
 		}
 
 		/////
@@ -27,25 +28,30 @@
 
 		function setData(name, data) {
 
-			// if(jsonStr) {
+			if(name && data) {
 
-			// 	var timestamp = new Date().getTime(),
-			// 		json = JSON.parse(jsonStr),
-			// 		newObject = {
-			// 			time: timestamp, 
-			// 			data: json
-			// 		}
+				var timestamp = new Date().getTime(),
+					taggetData = { 
+						time: timestamp, 
+			 			data: data
+					};
 
-			// 	if(toLocal) {
-			// 		localStorage[name] = JSON.stringify(newObject);
-			// 	} else {
-			// 		sessionStorage[name] = JSON.stringify(newObject);
-			// 	}
-			// }
+				if($rootScope.currState && $rootScope.currState.savePass) {
+					localStorage[name] = JSON.stringify(taggetData);
+				} else {
+					sessionStorage[name] = JSON.stringify(taggetData);
+				}
+
+			}
+		}
+
+		function removeData(name) {
+
+			localStorage.removeItem(name);
+			sessionStorage.removeItem(name);
 
 		}
 
 	}	
 
 })()
-

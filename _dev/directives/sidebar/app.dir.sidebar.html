@@ -33,7 +33,7 @@
 				Расписание
 			</li>
 		</a>
-		<a class='sidebar-menu-item__link' ui-sref="personal" data-ng-show="currState.isAuth">
+		<a class='sidebar-menu-item__link' ui-sref="personal" data-ng-show="!isEmpty()">
 			<li class='sidebar-menu-item personal-li'>
 				<i class="material-icons sidebar-menu-item__icon">&#xE7FD;</i>
 				Персональная
@@ -45,7 +45,7 @@
 				Справочник
 			</li>
 		</a>
-		<a class='sidebar-menu-item__link' ui-sref="settings" data-ng-show="currState.isAuth">
+		<a class='sidebar-menu-item__link' ui-sref="settings" data-ng-show="!isEmpty()">
 			<li class='sidebar-menu-item settings-li'>
 				<i class="material-icons sidebar-menu-item__icon">&#xE8B8;</i>
 				Настройки
@@ -57,7 +57,7 @@
 				О приложении
 			</li>
 		</a>
-		<a class='sidebar-menu-item__link' data-ng-click="disLogin()">
+		<a class='sidebar-menu-item__link' ng-click="disLogin()">
 			<li class='sidebar-menu-item exit-li'>
 				<i class="material-icons sidebar-menu-item__icon">&#xE879;</i>
 				Сменить пользователя

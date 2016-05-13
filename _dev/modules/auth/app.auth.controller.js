@@ -22,8 +22,7 @@
 		}
 		
 		$rootScope.currState = {
-	        savePass: false,
-	        isAuth: false 
+	        savePass: false
 	    }
 
 	    //////////////////
@@ -56,18 +55,7 @@
 
 	    function tryAuth(user) {
 
-	    	$dataService.load({
-	    		type: 'userinfo',
-	    		data: user,
-	    		method: 'POST',
-	    		withCache: false,
-	    		success: function() {
-	    			$rootScope.currState.isAuth = true;
-	    			$rootScope.$state.go("menu");
-	    		}
-	    	})
-
-	    	
+	    	$dataService.load({ type: 'userinfo', data: user });	    	
 
 	    }
 

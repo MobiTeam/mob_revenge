@@ -125,7 +125,10 @@
 				 	$rootScope.$state.go('auth');
 				}
 			
-			}		
+			}
+
+			// console.log($session.isEmpty());
+			// $rootScope.currState.isAuth = !$session.isEmpty();		
 
 		});
 

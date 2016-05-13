@@ -1,13 +1,12 @@
 .sidebar {
-	position: absolute;
 	width: 260px;
 	background: white;
-	height: 100%;
 	z-index: 2000;
 	transition:all ease-out 0.2s;
-	left: 0px;
+	overflow-y: scroll;
 	user-select: none;
 	box-shadow: 10px 0px 65px -23px rgba(0,0,0,0.12);
+	position: fixed;
 }
 
 .sidebar.ng-hide {
@@ -19,6 +18,9 @@
 	height: 54px;
 	background: #5677fc;
 	color: white;
+	position: absolute;
+	top: 0px;
+	left: 0px;
 }
 
 .sidebar-header__text {
@@ -38,6 +40,16 @@
 	font-size: 15px;
 	padding: 15px;
 	font-weight: 500;
+	margin-top: 54px;
+}
+
+.sidebar-menu {
+	position: fixed;
+	left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    min-height: 100%;
 }
 
 .sidebar-menu-item {

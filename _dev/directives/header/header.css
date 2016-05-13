@@ -6,6 +6,7 @@
 	background: #5677fc;
 	color: white;
 	position: fixed;
+	z-index: 1500;
 }
 
 /* header-line */

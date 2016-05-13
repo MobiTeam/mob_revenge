@@ -179,5 +179,61 @@
 	background: url('/common/img/info_hi_icon.png') no-repeat center center;
 }
 
+/* for retina display */
 
+@media (-webkit-min-device-pixel-ratio: 2) { 
+
+
+	.main_calendar_icon {
+		background: url('/common/img/schedule_icon@2x.png') no-repeat center center;
+		background-size: 64px 64px;
+	}
+
+	.main_news_icon {
+		background: url('/common/img/newspaper_icon@2x.png') no-repeat center center;
+		background-size: 64px 64px;
+	}
+
+	.main_lib_icon {
+		background: url('/common/img/lib_icon@2x.png') no-repeat center center;
+		background-size: 64px 64px;
+	}
+
+	.main_file_icon {
+		background: url('/common/img/files-res@2x.png') no-repeat center center;
+		background-size: 64px 64px;
+	}
+
+	.main_group_icon {
+		background: url('/common/img/students_group_icon@2x.png') no-repeat center center;
+		background-size: 64px 64px;
+	}
+
+	.main_person_icon {
+		background: url('/common/img/person_hi_icon@2x.png') no-repeat center center;
+		background-size: 64px 64px;
+	}
+
+	.main_rouble_icon {
+		background: url('/common/img/rouble_hi_icon@2x.png') no-repeat center center;
+		background-size: 64px 64px;
+	}
+
+	.main_directory_icon {
+		background: url('/common/img/directory_hi_icon@2x.png') no-repeat center center;
+		background-size: 64px 64px;
+	}
+
+	.main_coffe_icon {
+		background: url('/common/img/coffe_hi_icon@2x.png') no-repeat center center;
+		background-size: 64px 64px;
+	}
+
+	.main_info_icon {
+		background: url('/common/img/info_hi_icon@2x.png') no-repeat center center;
+		background-size: 64px 64px;
+	}
+
+
+}
 

@@ -4,31 +4,27 @@
 		.module('app')
 		.factory('$session', sessionFunction);
 
-	sessionFunction.$inject = ['$dataService'];
+	sessionFunction.$inject = ['$dataService', '$rootScope'];
 	
-	function sessionFunction($dataService) {
+	function sessionFunction($dataService, $rootScope) {
 
 		return {
 			isEmpty: isEmpty,
-			drop: drop
+			disLogin: disLogin
 		}
 
 		/////
 
 		function isEmpty() {
 
-			return true;
-			//return $dataService.isset('userinfo')) 
+			return !$dataService.isset('userinfo');
 
 		}
 
-		function drop() {
+		function disLogin() {
 
-			//$dataService.dropSession();
-
-		}
-
-		function create() {
+			$dataService.remove('userinfo');
+			$rootScope.$state.go('auth');
 
 		}
 

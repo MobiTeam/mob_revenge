@@ -4,6 +4,10 @@ html, body {
 	background: #f5f5f5;
 }
 
+.no-scroll {
+	overflow-y: hidden;
+}
+
 .overlay {
 	position: fixed;
 	background: black;

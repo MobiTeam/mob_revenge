@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru" data-ng-app="app">
+<html lang="ru" data-ng-app="app" data-ng-controller='viewController' data-ng-class='{"no-scroll": state.sidebarIsOpened}'>
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 	<meta charset="UTF-8">
@@ -10,7 +10,7 @@
 	<link rel="stylesheet" type="text/css" href="/modules/css/main.css">
 </head>
 
-<body data-ng-controller='viewController'>
+<body>
 	
 	<div class="overlay" data-ng-show="state.sidebarIsOpened" data-ng-click="closeSidebar()"></div>
 
@@ -20,8 +20,8 @@
 
 	<div data-ui-view class="viewBox"></div>
 
-	<script src="common/libs.js"></script>
-	<script src="modules/js/app.js"></script>
+	<script src="/common/libs.js"></script>
+	<script src="/modules/js/app.js"></script>
 </body>
 
 </html>

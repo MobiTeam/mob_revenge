@@ -4,9 +4,9 @@
 		.module('app')
 		.controller('viewController', viewController);
 
-	viewController.$inject = ['$scope', '$animate', '$rootScope'];
+	viewController.$inject = ['$scope', '$animate', '$rootScope', '$session'];
 
-	function viewController ($scope, $animate, $rootScope) {
+	function viewController ($scope, $animate, $rootScope, $session) {
 
 		$scope.state = {
 			'title': '',
@@ -15,8 +15,9 @@
 
 		$scope.toogleSidebar = toogleSidebar;
 		$scope.closeSidebar = closeSidebar;
-		$scope.disLogin = disLogin;
 		$scope.$on('$stateChangeSuccess', closeSidebar);
+		$scope.disLogin = $session.disLogin;
+		$scope.isEmpty = $session.isEmpty;
 
 
 		///////
@@ -33,16 +34,16 @@
 		    
 		}
 
-		function disLogin() {
+		// function disLogin() {
 
-			if(localStorage && sessionStorage) {
-				localStorage.clear();
-				sessionStorage.clear();
-				$rootScope.currState = null;
-				$rootScope.$state.go('auth');
-			}
+		// 	if(localStorage && sessionStorage) {
+		// 		localStorage.clear();
+		// 		sessionStorage.clear();
+		// 		$rootScope.currState = null;
+		// 		$rootScope.$state.go('auth');
+		// 	}
 
-		}
+		// }
 
 	}	
 

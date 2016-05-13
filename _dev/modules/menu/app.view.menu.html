@@ -33,7 +33,7 @@
 		</div>
 	</a>
 
-	<a class='menu_item_a' ui-sref="timetable" data-ng-show="currState.isAuth"> 
+	<a class='menu_item_a' ui-sref="timetable" data-ng-show="!isEmpty()"> 
 		<div class="content_box_menuitem authblock">
 			
 			<div class="main_lib_icon main_icon_block"></div>
@@ -57,7 +57,7 @@
 		</div>
 	</a>
 	
-	<a class='menu_item_a' ui-sref="timetable" data-ng-show="currState.isAuth">
+	<a class='menu_item_a' ui-sref="timetable" data-ng-show="!isEmpty()">
 		<div class="content_box_menuitem authblock only_stud" hashtag="group_info" style="display: inline-block;">
 			
 			<div class="main_group_icon main_icon_block"></div>
@@ -69,7 +69,7 @@
 		</div>
 	</a>
 
-	<a class='menu_item_a' ui-sref="personal" data-ng-show="currState.isAuth">
+	<a class='menu_item_a' ui-sref="personal" data-ng-show="!isEmpty()">
 		<div class="content_box_menuitem authblock" hashtag="persinf" style="display: inline-block;">
 			
 			<div class="main_person_icon main_icon_block"></div>
