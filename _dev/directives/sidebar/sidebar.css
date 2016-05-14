@@ -7,6 +7,9 @@
 	user-select: none;
 	box-shadow: 10px 0px 65px -23px rgba(0,0,0,0.12);
 	position: fixed;
+	height: 100%;
+	overflow-x: hidden;
+	padding-bottom: 10px;
 }
 
 .sidebar.ng-hide {
@@ -43,14 +46,6 @@
 	margin-top: 54px;
 }
 
-.sidebar-menu {
-	position: fixed;
-	left: 0;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    min-height: 100%;
-}
 
 .sidebar-menu-item {
 	user-select: none;
